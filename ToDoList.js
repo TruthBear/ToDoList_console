@@ -19,7 +19,9 @@ function todoList() {
       todoData.push(input2);
       console.log(`${input2}을 추가하셨습니다.`);
     } else if (input === "삭제") {
-      console.log("삭제하셨습니다.");
+      const input3 = prompt("삭제할 todo의 번호를 입력해주세요!");
+      console.log(`${todoData[input3-1]}를 삭제하셨습니다.`);
+      todoData.splice(input3-1, 1);
     } else if (input === "조회") {
       console.log("--------------------");
       for(let i=0; i<todoData.length; i++) {
